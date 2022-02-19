@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Artifacts>
+  <Artifact itemID="UP_LightningRod">
+    <Name>Lightning Rod</Name>
+    <Tags></Tags>
+    <App trigger="OnEnemyHit" effect="Lua" chance="0.50" check="NotWeaponOrDrone" value="UP_ThunderCheckEnergize"></App>
+    <App trigger="None" effect="Lua" value="UP_Energize"></App>
+    <Description>50% to gain &lt;hg&gt;Energize&lt;/hg&gt; when a Thunder spell hits.</Description>
+    <Meta></Meta>
+    <Rarity>1</Rarity>
+    <Params></Params>
+  </Artifact>
+  <Artifact itemID="UP_Capacitor">
+    <Name>Capacitor</Name>
+    <Tags></Tags>
+    <App trigger="OnPlayerSpellCast" effect="Lua" amount="3" value="UP_ManaCheckEnergize"></App>
+    <App trigger="None" effect="Lua" value="UP_Energize"></App>
+    <Description>After you cast a spell costing 3 or more mana, gain &lt;hg&gt;Energize&lt;/hg&gt;.</Description>
+    <Meta></Meta>
+    <Rarity>2</Rarity>
+    <Params></Params>
+  </Artifact>
+</Artifacts>

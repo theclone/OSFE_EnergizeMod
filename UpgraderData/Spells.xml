@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+<Spells>
+  <Spell itemID="UP_Refurbish">
+    <Stats setToGunPoint="None"></Stats>
+    <HitAllies></HitAllies>
+    <Name>Refurbish</Name>
+    <Tags>Player</Tags>
+    <Description>&lt;hg&gt;Energize&lt;/hg&gt; your next spell.</Description>
+    <Meta>Upgrades next spell cast</Meta>
+    <Rarity>0</Rarity>
+    <Brand>Hexawen</Brand>
+    <Mana>1</Mana>
+    <Damage>Zero</Damage>
+    <Shots>1</Shots>
+    <Tiles>1</Tiles>
+    <Location>End</Location>
+    <TimeBetweenShots>0</TimeBetweenShots>
+    <ShotVelocity>0</ShotVelocity>
+    <ShotDuration>0</ShotDuration>
+    <ShotDelay></ShotDelay>
+    <CastDelay>0</CastDelay>
+    <DestroyOnHit>false</DestroyOnHit>
+    <OnCast amount="1" duration="0" target="Self" value="UP_Energize">Lua</OnCast>
+    <OnCast value="EchoX">CastVisual</OnCast>
+  </Spell>
+  <Spell itemID="UP_Overclock">
+    <Stats animBlast="FireSpinBlast" shotSound="fire_spray" setToGunPoint="None"></Stats>
+    <HitAllies></HitAllies>
+    <Name>Overclock</Name>
+    <Tags>Player</Tags>
+    <Description>Gain 3 &lt;hg&gt;Energize&lt;/hg&gt;. Create a ef.Flame on your tile.</Description>
+    <Meta>Upgrades next 3 spells, makes flame on self tile</Meta>
+    <Flavor>Don't thermal throttle!</Flavor>
+    <Rarity>2</Rarity>
+    <Brand>Doublelift</Brand>
+    <Mana>2</Mana>
+    <Action>Multishot</Action>
+    <Damage>Zero</Damage>
+    <Shots>1</Shots>
+    <Tiles>1</Tiles>
+    <Location>Player</Location>
+    <TimeBetweenShots>0</TimeBetweenShots>
+    <ShotVelocity>0</ShotVelocity>
+    <ShotDuration>0.1</ShotDuration>
+    <ShotDelay></ShotDelay>
+    <CastDelay>0</CastDelay>
+    <BlastDuration>0.63</BlastDuration>
+    <DestroyOnHit>false</DestroyOnHit>
+    <OnCast></OnCast>
+    <TouchTile>Flame</TouchTile>
+    <OnCast amount="3" duration="0" target="Self" value="UP_Energize">Lua</OnCast>
+  </Spell>
+  <Spell itemID="UP_EnergySteal">
+    <Stats animShot="ShieldArrow" castSound="ice_beam" shotSound="zap_fast" setToGunPoint="Both"></Stats>
+    <HitAllies></HitAllies>
+    <HitEnemies>true</HitEnemies>
+    <HitSelf></HitSelf>
+    <HitStructures>true</HitStructures>
+    <Name>Energy Siphon</Name>
+    <Tags>Player</Tags>
+    <Action>Multishot</Action>
+    <Description>Shoot twice and gain &lt;hg&gt;Energize&lt;/hg&gt; when this hits an enemy.</Description>
+    <Meta>Gain Energize on hit</Meta>
+    <Rarity>1</Rarity>
+    <Brand>Convergence</Brand>
+    <Mana>3</Mana>
+    <Damage>30</Damage>
+    <Shots>2</Shots>
+    <Tiles>1</Tiles>
+    <Location>End</Location>
+    <TimeBetweenShots>0</TimeBetweenShots>
+    <ShotVelocity>700</ShotVelocity>
+    <ShotDuration>1.5</ShotDuration>
+    <ShotDelay></ShotDelay>
+    <CastDelay>0.1</CastDelay>
+    <BlastDuration>0.1</BlastDuration>
+    <DestroyOnHit>true</DestroyOnHit>
+    <OnHit amount="1" duration="0" target="Self" value="UP_Energize">Lua</OnHit>
+  </Spell>
+  <Spell itemID="UP_EnergyDrink">
+    <Stats animWarning="WarningManaC" animObj="PotionShotBlue" animBlast="ManaBlast" animShot=""
+      castSound="misc_shimmer" shotSound="ice_crash_short" hitSound="laser_recharge"
+      setToGunPoint="Both" timeToTravel="1" bending="90"></Stats>
+    <HitAllies>true</HitAllies>
+    <HitEnemies>true</HitEnemies>
+    <HitSelf>true</HitSelf>
+    <HitStructures>true</HitStructures>
+    <Name>Energy Drink</Name>
+    <Tags>Player</Tags>
+    <Action>Mortar</Action>
+    <Description>Throw at nearby tile and catch to gain &lt;hg&gt;2 Energize&lt;hg&gt;</Description>
+    <Meta>Throw at nearby tile and catch to gain 2 energize</Meta>
+    <Rarity>0</Rarity>
+    <Brand>Convergence</Brand>
+    <Mana>0</Mana>
+    <Damage>Zero</Damage>
+    <Shots>1</Shots>
+    <Tiles>1</Tiles>
+    <Location Shape="CrossSmall" Pattern="Moveable">Current</Location>
+    <TimeBetweenShots>0.2</TimeBetweenShots>
+    <ShotVelocity>0</ShotVelocity>
+    <ShotDuration>0.2</ShotDuration>
+    <ShotDelay></ShotDelay>
+    <CastDelay>0</CastDelay>
+    <BlastDuration>0.63</BlastDuration>
+    <WarningDuration>1</WarningDuration>
+    <DestroyOnHit>true</DestroyOnHit>
+    <OnHit amount="2" target="Self">Mana</OnHit>
+  </Spell>
+  <!-- <Spell itemID="UP_MasterClass">
+    <Stats setToGunPoint="None"></Stats>
+    <HitAllies></HitAllies>
+    <Name>Overclock</Name>
+    <Tags>Player</Tags>
+    <Description>Effect changes depending on how many upgrades this spells has when cast.</Description>
+    <Meta>Upgrades next spell cast</Meta>
+    <Rarity>2</Rarity>
+    <Brand>Doublelift</Brand>
+    <Mana>1</Mana>
+    <Damage>Zero</Damage>
+    <Shots>1</Shots>
+    <Tiles>1</Tiles>
+    <Location>End</Location>
+    <TimeBetweenShots>0</TimeBetweenShots>
+    <ShotVelocity>0</ShotVelocity>
+    <ShotDuration>0</ShotDuration>
+    <ShotDelay></ShotDelay>
+    <CastDelay>0</CastDelay>
+    <DestroyOnHit>false</DestroyOnHit>
+    <OnCast amount="1" duration="0" target="Self" value="UP_Energize">Lua</OnCast>
+    <OnCast value="EchoX">CastVisual</OnCast>
+  </Spell> -->
+</Spells>

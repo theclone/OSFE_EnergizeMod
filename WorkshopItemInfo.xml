@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<WorkshopItemInfo xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <PublishedFileId>2752918568</PublishedFileId>
+  <Name>Upgraded</Name>
+  <Description>Add cards that interact with upgrades.</Description>
+  <IconFileName />
+  <Tags>
+    <string>Spells</string>
+  </Tags>
+  <Priority>0</Priority>
+  <ModVersion>0</ModVersion>
+  <GameVersion>1.7.0</GameVersion>
+</WorkshopItemInfo>
