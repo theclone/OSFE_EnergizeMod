@@ -3,9 +3,9 @@
   <Artifact itemID="UP_LightningRod">
     <Name>Lightning Rod</Name>
     <Tags></Tags>
-    <App trigger="OnEnemyHit" effect="Lua" chance="0.50" check="NotWeaponOrDrone" value="UP_ThunderCheckEnergize"></App>
+    <App trigger="OnEnemyHit" effect="Lua" chance="0.25" check="NotWeaponOrDrone" value="UP_ThunderCheckEnergize"></App>
     <App trigger="None" effect="Lua" value="UP_Energize"></App>
-    <Description>50% to gain &lt;hg&gt;Energize&lt;/hg&gt; when a Thunder spell hits.</Description>
+    <Description>25% to gain &lt;hg&gt;Energize&lt;/hg&gt; when a Thunder spell hits.</Description>
     <Meta></Meta>
     <Rarity>1</Rarity>
     <Params></Params>
@@ -18,6 +18,15 @@
     <Description>After you cast a spell costing 3 or more mana, gain &lt;hg&gt;Energize&lt;/hg&gt;.</Description>
     <Meta></Meta>
     <Rarity>2</Rarity>
+    <Params></Params>
+  </Artifact>
+  <Artifact itemID="UP_EnergenOnHit">
+    <Name>EnergyGenerator</Name>
+    <Tags>Cpu</Tags>
+    <App trigger="OnTakeHit" effect="CastSpell" value="UP_EnergenShot"></App>
+    <Description></Description>
+    <Meta>Grant player energy on hit</Meta>
+    <Brand></Brand>
     <Params></Params>
   </Artifact>
 </Artifacts>

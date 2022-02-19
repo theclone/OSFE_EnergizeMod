@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Beings> 
+ <Being beingID="UP_Energen">
+    <Name>Energen</Name>
+    <Tags>Ally</Tags>
+    <Health>3</Health>
+    <Experience>0</Experience>
+    <Money>0</Money>
+    <MovPattern></MovPattern>
+    <Movements></Movements>
+    <MovementDelay></MovementDelay>
+    <LerpTime>0.1</LerpTime>
+    <StartDelay>0</StartDelay>
+    <LoopDelay>9999</LoopDelay>
+    <Defense>0</Defense>
+    <Artifacts>UP_EnergenOnHit</Artifacts>
+    <Stats localGunPointPos="0,20" dieSound="glass_shatter_echo" animName="Sunbeamer"></Stats>
+  </Being>
+</Beings>

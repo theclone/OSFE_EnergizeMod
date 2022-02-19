@@ -3,7 +3,7 @@
   <PublishedFileId>2752918568</PublishedFileId>
   <Name>Upgraded</Name>
   <Description>Add cards that interact with upgrades.</Description>
-  <IconFileName />
+  <IconFileName>workshopIcon.png</IconFileName>
   <Tags>
     <string>Spells</string>
   </Tags>

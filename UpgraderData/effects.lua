@@ -35,21 +35,28 @@ function UP_EnergizeCheck(spell)
     end
 end
 
+function UP_ApplyEnergize(being, amount)
+    if (being.battleGrid.InBattle()) then
+        AddEffect(being, "UP_Energize", 0, amount + GetEffectAmount(being, "UP_Energize"))
+        Log(string.format("attempted to apply upgrade, upgrade now at %f", GetEffectAmount(being, "UP_Energize")))
+    else 
+        being.MustBeInBattleWarning()
+    end
+end
+
 function UP_ManaCheckEnergize(spell)
     Log("check for mana");
     if (spell.being.spellToCast.mana >= GetAmount(spell)) then
         --waiting for spell to cast before giving upgrade
         local beingRef = spell.being;
         WaitForSeconds(spell, spell.being.spellToCast.castDelay);
-        AddEffect(beingRef, "UP_Energize", 0, 1 + GetEffectAmount(beingRef, "UP_Energize"))
-        Log(string.format("attempted to apply upgrade, upgrade now at %f", GetEffectAmount(beingRef, "UP_Energize")))
+        UP_ApplyEnergize(beingRef, 1)
     end
 end
 
 function UP_ThunderCheckEnergize(item)
     Log("check for thunder");
     if (UP_ThunderSpells[item.being.battleGrid.lastTargetHit.lastSpellHit.itemID] == true) then
-        AddEffect(item.being, "UP_Energize", 0, 1 + GetEffectAmount(item.being, "UP_Energize"))
-        Log(string.format("attempted to apply upgrade, upgrade now at %f", GetEffectAmount(item.being, "UP_Energize")))
+        UP_ApplyEnergize(item.being, 1)
     end
 end
